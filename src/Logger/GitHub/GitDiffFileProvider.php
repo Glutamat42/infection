@@ -67,6 +67,8 @@ class GitDiffFileProvider
         $filter = $this->shellCommandLineExecutor->execute(array_merge(
             [
                 'git',
+                '-C',
+                'local/adlersetup',
                 'diff',
                 $referenceCommit,
                 '--diff-filter',
